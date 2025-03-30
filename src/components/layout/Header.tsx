@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
@@ -19,42 +21,42 @@ export function Header({ className }: HeaderProps) {
         className,
       )}
     >
-      <div className="text-[#426B1F] text-[32px] font-medium leading-8 tracking-[-0.32px]">
+      <Link to="/" className="text-[#426B1F] text-[32px] font-medium leading-8 tracking-[-0.32px]">
         EcoFarm
-      </div>
+      </Link>
 
       {/* Desktop Navigation */}
       <nav className="flex items-center gap-[27px] max-md:hidden">
-        <a
-          href="#"
+        <Link
+          to="#"
           className="text-black text-center text-base font-normal leading-[20.8px]"
         >
           Simple Tips
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="#"
           className="text-black text-center text-base font-normal leading-[20.8px]"
         >
           Resource Management Tools
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="#"
           className="text-black text-center text-base font-normal leading-[20.8px]"
         >
           Weather Estimates
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/community-collaboration"
           className="text-black text-center text-base font-normal leading-[20.8px]"
         >
           Community Collaboration
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="#"
           className="text-black text-center text-base font-normal leading-[20.8px]"
         >
           BaskMarket Connectivity
-        </a>
+        </Link>
       </nav>
 
       {/* Mobile Menu Button */}
@@ -82,9 +84,9 @@ export function Header({ className }: HeaderProps) {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-50 p-5 flex flex-col md:hidden">
           <div className="flex justify-between items-center mb-8">
-            <div className="text-[#426B1F] text-[32px] font-medium leading-8 tracking-[-0.32px]">
+            <Link to="/" className="text-[#426B1F] text-[32px] font-medium leading-8 tracking-[-0.32px]">
               EcoFarm
-            </div>
+            </Link>
             <button onClick={toggleMenu} aria-label="Close menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -103,36 +105,41 @@ export function Header({ className }: HeaderProps) {
             </button>
           </div>
           <nav className="flex flex-col gap-6">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-black text-xl font-normal py-2 border-b border-gray-100"
+              onClick={toggleMenu}
             >
               Simple Tips
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="text-black text-xl font-normal py-2 border-b border-gray-100"
+              onClick={toggleMenu}
             >
               Resource Management Tools
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="text-black text-xl font-normal py-2 border-b border-gray-100"
+              onClick={toggleMenu}
             >
               Weather Estimates
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/community-collaboration"
               className="text-black text-xl font-normal py-2 border-b border-gray-100"
+              onClick={toggleMenu}
             >
               Community Collaboration
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="text-black text-xl font-normal py-2 border-b border-gray-100"
+              onClick={toggleMenu}
             >
               BaskMarket Connectivity
-            </a>
+            </Link>
           </nav>
         </div>
       )}
