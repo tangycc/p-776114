@@ -14,8 +14,8 @@ export function Header({ className }: HeaderProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // External project URL
-  const externalProjectUrl = "https://lovable.dev/projects/9525f86c-f433-4b93-a446-cd70587a05ef";
+  // External project URL - updated to the published site
+  const externalProjectUrl = "https://p-626510.lovable.app/";
 
   return (
     <header
