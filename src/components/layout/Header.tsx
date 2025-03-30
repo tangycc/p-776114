@@ -14,6 +14,9 @@ export function Header({ className }: HeaderProps) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // External project URL
+  const externalProjectUrl = "https://lovable.dev/projects/9525f86c-f433-4b93-a446-cd70587a05ef";
+
   return (
     <header
       className={cn(
@@ -51,6 +54,14 @@ export function Header({ className }: HeaderProps) {
         >
           Community Collaboration
         </Link>
+        <a
+          href={externalProjectUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#426B1F] text-center text-base font-medium leading-[20.8px]"
+        >
+          External Collaboration
+        </a>
         <Link
           to="#"
           className="text-black text-center text-base font-normal leading-[20.8px]"
@@ -133,6 +144,15 @@ export function Header({ className }: HeaderProps) {
             >
               Community Collaboration
             </Link>
+            <a
+              href={externalProjectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#426B1F] text-xl font-medium py-2 border-b border-gray-100"
+              onClick={toggleMenu}
+            >
+              External Collaboration
+            </a>
             <Link
               to="#"
               className="text-black text-xl font-normal py-2 border-b border-gray-100"
