@@ -56,8 +56,6 @@ export function Header({ className }: HeaderProps) {
         </Link>
         <a
           href={externalProjectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-[#426B1F] text-center text-base font-medium leading-[20.8px]"
         >
           External Collaboration
@@ -146,8 +144,6 @@ export function Header({ className }: HeaderProps) {
             </Link>
             <a
               href={externalProjectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-[#426B1F] text-xl font-medium py-2 border-b border-gray-100"
               onClick={toggleMenu}
             >
